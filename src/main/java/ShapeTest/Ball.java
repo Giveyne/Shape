@@ -2,8 +2,17 @@ package ShapeTest;
 
 import static java.lang.Math.*;
 
-public class Ball extends SolidOfRevolution{
-    public Ball (double radius){
-        super (PI*radius*radius*4);
+public class Ball implements SolidOfRevolution {
+    private double radius;
+
+    public Ball(double radius) {
+        this.radius = radius;
     }
+
+    @Override
+    public double getVolume() {
+
+        return (PI * radius * radius * 4);
+    }
+
 }

@@ -1,28 +1,26 @@
 package ShapeTest;
 
-public class Pyramid extends Shape{
+public class Pyramid implements Shape{
 
     private double square;
     private double height;
 
-/*    public double getHeight() {
+    public double getHeight() {
         return height;
     }
 
     public double getSquare() {
         return square;
-    }*/
+    }
 
     public Pyramid(double square, double height){
-        super(square*height*1/3);
+        super();
         this.height = height;
         this.square = square;
     }
 
-
-   /* public double getVolume(double square, double height) {
-        this.height = height;
-        this.square = square;
-        return 1/3*square*height;
-    }*/
+    @Override
+    public double getVolume() {
+        return square*height*1/3;
+    }
 }
